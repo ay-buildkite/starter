@@ -11,7 +11,7 @@ if [[ "$action" == "collect" ]]; then
     echo
   done
 else
-  (set -x: buildkite-agent meta-data get generated-number )
+  (set -x; buildkite-agent meta-data get generated-number )
 fi
 
 echo
