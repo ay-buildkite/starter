@@ -9,7 +9,7 @@ parallel_index=${1:-}
 
 generated_number=$(generate_number)
 
-if [[ -n "$parallel_index "]]; then
+if [[ -n "$parallel_index " ]]; then
   ( set -x; buildkite-agent meta-data set "generated-numner::$parallel_index" "${generated_number}" )
 else
   ( set -x; buildkite-agent meta-data set "generated-number" "${generated_number}" )
